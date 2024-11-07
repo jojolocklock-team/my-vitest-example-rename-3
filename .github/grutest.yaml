@@ -7,6 +7,8 @@ pipeline:
     exec:
       - npx vitest run {{testFilePath}}
 settings:
+  codeModels: ["gpt-4o"]
+  skipFailedTests: false
   exportFunctionOrClass: allow
   testPlacementStrategies:
     - type: co-located
