@@ -25,4 +25,16 @@ describe('sum', () => {
   it('should return zero when both numbers are zero', () => {
     expect(sum(0, 0)).toBe(0);
   });
+
+  it('should return NaN when a non-numeric value is passed as the first argument', () => {
+    expect(sum(NaN, 5)).toBeNaN();
+  });
+
+  it('should return NaN when a non-numeric value is passed as the second argument', () => {
+    expect(sum(5, NaN)).toBeNaN();
+  });
+
+  it('should return NaN when both arguments are non-numeric values', () => {
+    expect(sum(NaN, NaN)).toBeNaN();
+  });
 });
