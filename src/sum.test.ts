@@ -21,4 +21,16 @@ describe('sum', () => {
   it('should handle large numbers correctly', () => {
     expect(sum(1000000, 2000000)).toBe(3000000);
   });
+
+  it('should return NaN when one of the inputs is not a number', () => {
+    expect(sum(NaN, 2)).toBeNaN();
+    expect(sum(1, NaN)).toBeNaN();
+    expect(sum(NaN, NaN)).toBeNaN();
+  });
+
+  it('should concatenate when inputs are non-numeric types', () => {
+    expect(sum('a' as any, 2)).toBe('a2');
+    expect(sum(1, 'b' as any)).toBe('1b');
+    expect(sum('a' as any, 'b' as any)).toBe('ab');
+  });
 });
