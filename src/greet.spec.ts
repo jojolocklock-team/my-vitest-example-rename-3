@@ -51,4 +51,14 @@ describe('greet', () => {
     const result = greet('Frank', null as unknown as string);
     expect(result).toBe('Hello, Frank!');
   });
+
+  it('should handle NaN as the name', () => {
+    const result = greet(NaN as unknown as string);
+    expect(result).toBe('Hello, NaN!');
+  });
+
+  it('should handle NaN as the custom greeting', () => {
+    const result = greet('George', NaN as unknown as string);
+    expect(result).toBe('Hello, George!');
+  });
 });
