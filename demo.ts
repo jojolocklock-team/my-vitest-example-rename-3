@@ -36,3 +36,18 @@ console.log('升序排序：', sortedStringsAsc);
 
 const sortedStringsDesc = sortArray(strings, 'desc');
 console.log('降序排序：', sortedStringsDesc);
+
+// 示例用法
+const numbers = [10, 5, 3, 12, 7];
+const sortedNumbersAsc = sortArray(numbers, 'asc');
+console.log('升序排序：', sortedNumbersAsc);
+
+const sortedNumbersDesc = sortArray(numbers, 'desc');
+console.log('降序排序：', sortedNumbersDesc);
+
+const strings = ['apple', 'orange', 'banana', 'grape'];
+const sortedStringsAsc = sortArray(strings, 'asc');
+console.log('升序排序：', sortedStringsAsc);
+
+const sortedStringsDesc = sortArray(strings, 'desc');
+console.log('降序排序：', sortedStringsDesc);
