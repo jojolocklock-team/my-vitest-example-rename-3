@@ -51,3 +51,6 @@ console.log('升序排序：', sortedStringsAsc);
 
 const sortedStringsDesc = sortArray(strings, 'desc');
 console.log('降序排序：', sortedStringsDesc);
+
+
+export { sortArray };
