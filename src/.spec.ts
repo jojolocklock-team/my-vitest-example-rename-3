@@ -18,4 +18,10 @@ describe('sum', () => {
     expect(sum(0, 5)).toBe(5);
     expect(sum(5, 0)).toBe(5);
   });
+
+  it('should return NaN when one or both arguments are NaN', () => {
+    expect(sum(NaN, 2)).toBeNaN();
+    expect(sum(2, NaN)).toBeNaN();
+    expect(sum(NaN, NaN)).toBeNaN();
+  });
 });
