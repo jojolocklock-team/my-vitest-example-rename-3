@@ -24,4 +24,16 @@ describe('sum', () => {
     expect(sum(2, NaN)).toBeNaN();
     expect(sum(NaN, NaN)).toBeNaN();
   });
+
+  it('should handle very large numbers correctly', () => {
+    const largeNumber1 = Number.MAX_SAFE_INTEGER;
+    const largeNumber2 = Number.MAX_SAFE_INTEGER;
+    expect(sum(largeNumber1, largeNumber2)).toBe(largeNumber1 + largeNumber2);
+  });
+
+  it('should handle very small numbers correctly', () => {
+    const smallNumber1 = Number.MIN_SAFE_INTEGER;
+    const smallNumber2 = Number.MIN_SAFE_INTEGER;
+    expect(sum(smallNumber1, smallNumber2)).toBe(smallNumber1 + smallNumber2);
+  });
 });
