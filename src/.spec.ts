@@ -24,4 +24,17 @@ describe('sum', () => {
     expect(sum(2, NaN)).toBeNaN();
     expect(sum(NaN, NaN)).toBeNaN();
   });
+
+  it('should return the sum of very large numbers', () => {
+    expect(sum(1e12, 1e12)).toBe(2e12);
+  });
+
+  it('should return the sum of very small numbers', () => {
+    expect(sum(1e-12, 1e-12)).toBe(2e-12);
+  });
+
+  it('should handle mixed number types (integer and float)', () => {
+    expect(sum(2, 2.5)).toBe(4.5);
+    expect(sum(2.5, 2)).toBe(4.5);
+  });
 });
