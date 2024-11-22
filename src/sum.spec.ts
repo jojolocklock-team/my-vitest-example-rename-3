@@ -22,4 +22,13 @@ describe('sum', () => {
     expect(sum(7, 0)).toBe(7);
     expect(sum(0, 7)).toBe(7);
   });
+
+  it('should return NaN when one of the numbers is NaN', () => {
+    expect(sum(NaN, 5)).toBeNaN();
+    expect(sum(5, NaN)).toBeNaN();
+  });
+
+  it('should return NaN when both numbers are NaN', () => {
+    expect(sum(NaN, NaN)).toBeNaN();
+  });
 });
